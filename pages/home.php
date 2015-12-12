@@ -1,3 +1,6 @@
-<h1>je suis la Home page</h1>
+<?php
 
-<p><a href="index.php?p=single"></a></p>
+$pdo = new PDO('mysql:dbname=blog;host=localhost','root','');
+
+$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+$res$pdo->query()
