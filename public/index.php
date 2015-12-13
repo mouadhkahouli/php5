@@ -11,6 +11,9 @@ if (isset($_GET['p'])){
     $p = 'home';
 }
 
+//init des objets
+
+$db = new App\Database('blog');
 
 ob_start(); // tous ce qui sera affiché sera stocké sans une var
 if($p ==='home'){

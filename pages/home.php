@@ -1,6 +1,11 @@
 <?php
 
-$pdo = new PDO('mysql:dbname=blog;host=localhost','root','');
+foreach ($db -> query('SELECT * FROM articles','App\Table\article')as $post);?>
+    <h2>
+        <a href="<?php $post->getURL() ?>"><?php $post->titre; ?></a>
+    </h2>
+     <p>
+         <?php $post->getExtrait();?>
+     </p>
+<?php endforeach ?>
 
-$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-$res$pdo->query()
