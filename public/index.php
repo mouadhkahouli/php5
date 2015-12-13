@@ -11,14 +11,14 @@ if (isset($_GET['p'])){
     $p = 'home';
 }
 
-//init des objets
+//initialisation des objets
 
 $db = new App\Database('blog');
 
 ob_start(); // tous ce qui sera affiché sera stocké sans une var
 if($p ==='home'){
     require '../pages/home.php';
-}elseif ($p==='single'){
+}elseif ($p==='article'){
     require '../pages/single.php';
 }
 $content = ob_get_clean();
